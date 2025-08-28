@@ -253,16 +253,16 @@ class UIController {
     updateReadings() {
         // Voltage
         if (this.store.actualVoltage !== null) {
-            this.elements.actVoltage.textContent = `${this.store.actualVoltage.toFixed(1)} V`;
+            this.elements.actVoltage.textContent = `${this.store.actualVoltage.toFixed(1)} kV`;
         } else {
-            this.elements.actVoltage.textContent = '--.- V';
+            this.elements.actVoltage.textContent = '--.- kV';
         }
 
         // Current
         if (this.store.actualCurrent !== null) {
-            this.elements.actCurrent.textContent = `${this.store.actualCurrent.toFixed(1)} A`;
+            this.elements.actCurrent.textContent = `${this.store.actualCurrent.toFixed(1)} mA`;
         } else {
-            this.elements.actCurrent.textContent = '--.- A';
+            this.elements.actCurrent.textContent = '--.- mA';
         }
 
         // Temperature
