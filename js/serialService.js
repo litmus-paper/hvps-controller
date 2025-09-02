@@ -22,14 +22,7 @@ class SerialService {
         }
 
         try {
-            this.port = await navigator.serial.requestPort({
-                filters: [
-                    { usbVendorId: 0x0403 }, // FTDI
-                    { usbVendorId: 0x10C4 }, // CP210x
-                    { usbVendorId: 0x067B }, // Prolific
-                    { usbVendorId: 0x1A86 }  // CH340
-                ]
-            });
+            this.port = await navigator.serial.requestPort();
             return this.port;
         } catch (error) {
             if (error.name === 'NotFoundError') {
