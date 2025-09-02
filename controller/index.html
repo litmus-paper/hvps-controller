@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanox Controller Software v1.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Nanox Controller Software v1.0</h1>
+            <div class="connection-status">
+                <span id="status-text">Not Connected</span>
+                <div class="status-indicator" id="status-indicator"></div>
+            </div>
+        </header>
+
+        <!-- Top Panel: Serial Controls -->
+        <section class="serial-controls">
+            <h2>Serial Connection</h2>
+            <div class="control-group">
+                <label for="baud-rate">Baud Rate:</label>
+                <select id="baud-rate">
+                    <option value="9600">9600</option>
+                    <option value="19200">19200</option>
+                    <option value="38400">38400</option>
+                    <option value="57600">57600</option>
+                    <option value="115200" selected>115200</option>
+                </select>
+            </div>
+            <button id="connect-btn" class="connect-btn">Connect</button>
+        </section>
+
+        <!-- Center Panel: Command Table -->
+        <section class="command-controls">
+            <h2>Command Control</h2>
+            <div class="table-container">
+                <table class="command-table" id="command-table">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Instruction</th>
+                            <th>Function</th>
+                            <th>Arguments</th>
+                        </tr>
+                    </thead>
+                    <tbody id="command-tbody">
+                        <!-- Commands will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="send-controls">
+                <button id="send-btn" class="send-btn" disabled>Send Command</button>
+            </div>
+        </section>
+
+        <!-- Bottom Panel: Communication Log -->
+        <section class="communication-log">
+            <div class="log-header">
+                <h2>Communication Log</h2>
+                <button id="clear-log-btn" class="clear-btn">Clear Log</button>
+            </div>
+            <div class="log-container" id="log-container">
+                <!-- Log entries will be added by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
