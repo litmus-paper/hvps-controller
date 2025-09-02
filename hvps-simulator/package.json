@@ -1,0 +1,24 @@
+{
+  "name": "hvps-simulator",
+  "version": "1.0.0",
+  "description": "High Voltage Power Supply (HVPS) Protocol Simulator",
+  "main": "hvps-simulator.js",
+  "scripts": {
+    "start": "node hvps-simulator.js",
+    "console": "node hvps-simulator.js console",
+    "list": "node hvps-simulator.js list",
+    "test": "node test-client.js"
+  },
+  "keywords": [
+    "hvps",
+    "simulator",
+    "protocol",
+    "serial",
+    "com-port"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^13.0.0"
+  }
+}

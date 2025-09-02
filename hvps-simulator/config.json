@@ -1,0 +1,18 @@
+{
+  "serialPort": {
+    "path": "COM3",
+    "baudRate": 9600,
+    "dataBits": 8,
+    "parity": "none",
+    "stopBits": 1,
+    "flowControl": "none",
+    "autoOpen": true
+  },
+  "simulator": {
+    "initialTemperature": 25,
+    "initialVoltage": 0,
+    "initialCurrent": 0,
+    "defaultCurrentLimit": 100,
+    "debugOutput": true
+  }
+}
