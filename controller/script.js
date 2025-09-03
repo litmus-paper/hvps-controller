@@ -167,6 +167,12 @@ class NanoxController {
                 flowControl: 'none'
             });
 
+            // Set RTS and clear DTR
+            await this.port.setSignals({ 
+                requestToSend: true,  // Set RTS
+                dataTerminalReady: false  // Clear DTR
+            });
+
             this.writer = this.port.writable.getWriter();
             this.reader = this.port.readable.getReader();
 
