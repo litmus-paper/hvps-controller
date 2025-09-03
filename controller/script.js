@@ -173,6 +173,15 @@ class NanoxController {
                 dataTerminalReady: false  // Clear DTR
             });
 
+            // Clear RTS after 500ms
+            setTimeout(async () => {
+                if (this.port && this.isConnected) {
+                    await this.port.setSignals({ 
+                        requestToSend: false  // Clear RTS
+                    });
+                }
+            }, 500);
+
             this.writer = this.port.writable.getWriter();
             this.reader = this.port.readable.getReader();
 
